@@ -1,0 +1,10 @@
+# Step 1 — Metrics Collection & Testing
+psutil==6.1.1
+pytest==8.3.5
+
+# Step 2+ — will be added in later phases
+# pandas
+# numpy
+# scikit-learn
+# fastapi
+# uvicorn
