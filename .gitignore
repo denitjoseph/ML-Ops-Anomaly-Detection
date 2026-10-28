@@ -23,3 +23,8 @@ Thumbs.db
 
 # Environment variables (for secrets — we'll use this later)
 .env
+dashboard/.env.local
+
+# Frontend dependencies and builds
+dashboard/node_modules/
+dashboard/dist/
