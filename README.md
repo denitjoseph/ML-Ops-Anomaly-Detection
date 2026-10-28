@@ -15,17 +15,18 @@ and displays results on a live web dashboard.
 
 ## Project Structure
 ```
-metrics/        → CPU & memory data collection
-data/           → auto-generated CSV logs
+metrics/        → CPU & memory data collection + CSV writing
+data/           → auto-generated CSV logs (git-ignored)
 model/          → Isolation Forest anomaly detector
 api/            → FastAPI REST endpoints
 dashboard/      → HTML/CSS/JS frontend
 tests/          → unit tests
+run_collector.py → entry-point: starts the collection loop
 ```
 
 ## Development Phases
 - [x] Phase 1: Metrics Collection
-- [ ] Phase 2: CSV Logging
+- [x] Phase 2: CSV Logger
 - [ ] Phase 3: ML Model (Isolation Forest)
 - [ ] Phase 4: FastAPI Backend
 - [ ] Phase 5: Web Dashboard

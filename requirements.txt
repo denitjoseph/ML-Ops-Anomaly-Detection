@@ -1,8 +1,11 @@
-# Step 1 — Metrics Collection & Testing
-psutil==6.1.1
-pytest==8.3.5
+# Phase 1 — Metrics Collection & Testing
+psutil==7.2.2
+pytest==9.2.0
 
-# Step 2+ — will be added in later phases
+# Phase 2 — CSV Logger
+# No new dependencies: csv and pathlib are Python built-ins
+
+# Phase 3+ — will be added in later phases
 # pandas
 # numpy
 # scikit-learn
