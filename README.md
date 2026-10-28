@@ -15,18 +15,41 @@ and displays results on a live web dashboard.
 
 ## Project Structure
 ```
-metrics/        → CPU & memory data collection + CSV writing
-data/           → auto-generated CSV logs (git-ignored)
-model/          → Isolation Forest anomaly detector
-api/            → FastAPI REST endpoints
-dashboard/      → HTML/CSS/JS frontend
-tests/          → unit tests
-run_collector.py → entry-point: starts the collection loop
+metrics/         -> CPU & memory data collection + CSV writing
+data/            -> auto-generated CSV logs (git-ignored)
+model/           -> Isolation Forest training and prediction
+models/          -> saved trained model file (git-ignored)
+api/             -> FastAPI REST endpoints (Phase 4)
+dashboard/       -> HTML/CSS/JS frontend (Phase 5)
+tests/           -> unit tests (all phases)
+run_collector.py -> entry-point: starts the collection loop
+```
+
+## Phase 3: Training and Prediction Commands
+
+**Step 1 — Collect at least 50 rows of data:**
+```powershell
+.\venv\Scripts\python run_collector.py --interval 5
+```
+
+**Step 2 — Train the Isolation Forest model:**
+```powershell
+.\venv\Scripts\python -m model.train_model
+```
+
+**Step 3 — Run sample predictions:**
+```powershell
+.\venv\Scripts\python -m model.predict_anomaly
+```
+
+**Run all tests (Phases 1, 2 and 3):**
+```powershell
+.\venv\Scripts\pytest tests\ -v
 ```
 
 ## Development Phases
 - [x] Phase 1: Metrics Collection
 - [x] Phase 2: CSV Logger
-- [ ] Phase 3: ML Model (Isolation Forest)
+- [x] Phase 3: ML Model (Isolation Forest)
 - [ ] Phase 4: FastAPI Backend
 - [ ] Phase 5: Web Dashboard

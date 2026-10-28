@@ -5,9 +5,12 @@ pytest==9.2.0
 # Phase 2 — CSV Logger
 # No new dependencies: csv and pathlib are Python built-ins
 
-# Phase 3+ — will be added in later phases
-# pandas
-# numpy
-# scikit-learn
+# Phase 3 — Isolation Forest ML Model
+pandas==3.1.0
+numpy==2.5.4
+scikit-learn==1.9.1
+joblib==1.6.0
+
+# Phase 4+ — will be added in later phases
 # fastapi
 # uvicorn
